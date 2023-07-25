@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import Basic_Stats from'./basic_stats.js'
+import Header from'./header'
+import Character_Attributes from './character_attributes.js'
+import Skills from './skills';
+import Profession from './profession';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Header />
+    <Basic_Stats />
+    <Character_Attributes />
+    <Skills />
+    <Profession/ >
   </React.StrictMode>
 );
 

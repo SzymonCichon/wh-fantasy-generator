@@ -1,38 +1,110 @@
-.App {
+body{
+  background-color: Wheat;
+  font-size: 2.5vh;
+}
+input 
+{
+  font-size: auto;
+  width: 90%;
+  height: 2.5vh;
+  background: Bisque;
+  border-color: BurlyWood;
+}
+
+.skills_select
+{
+  font-size: auto;
+  width: 90%;
+  height: 100%;
+  background: Bisque;
+  border-color: BurlyWood;
+  
+}
+th
+{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main_Div
+{
+  position: absolute;
+  background: AntiqueWhite;
+  border-radius: 1vh;
+  padding: 2.5vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#header
+{
+  
+  width: 94%;
+  left: 2%;
+  
+  height: 4%;
+  font-size: 100%;
+  top: 2.5%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5%;
+
+}
+.stats_table
+{
+  width: 100%;
+}
+#basic_stats {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  width: 45%;
+  text-align: justify;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+#character_attributes
+{
+  position: absolute;
+  top: 84%;
+  left: 2%;
+  width: 45%;
+  text-align: justify;
+}
+#attribute_names
+{
+  width: 44%;
+}
+.attribute
+{
+  width: 7%;
 }
 
-.App-link {
-  color: #61dafb;
+#skills
+{
+  position: absolute;
+  top: 10%;
+  left: 51%;
+  width: 43.5%;
+  text-align: justify;
+}
+.attribute_names
+{
+  width: 40%;
+}
+.skill_attribute
+{
+  width: 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#Professions
+{
+  position: absolute;
+  top: 150%;
+  left: 2%;
+  width: 45%;
+  text-align: justify;
+}
+
+#generatesadf
+{
+  position: absolute;
+  top:200%
 }
