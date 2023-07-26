@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import './App.css';
 import data from './data.json';
 
@@ -14,9 +14,7 @@ var Create_Datalists_Class = (props) => {
 class Add_more_profesions extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {isToggleOn: true};
-        this.handleClick = this.handleClick.bind(this);
-        this.number_of_elements =1
+        
     }
     handleClick()
     {
@@ -78,4 +76,4 @@ class Profession extends React.Component
 
 
 
-export default Profession
+export default Profession*/

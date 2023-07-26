@@ -14,8 +14,7 @@ root.render(
     <Header />
     <Basic_Stats />
     <Character_Attributes />
-    <Skills />
-    <Profession/ >
+
   </React.StrictMode>
 );
 
