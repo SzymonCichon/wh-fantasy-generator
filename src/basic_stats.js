@@ -2,28 +2,18 @@ import React from 'react';
 import './App.css';
 import data from './data.json';
 
-function create_datalists_function(state, datalist_name) {
-    var datalist_return = "<datalist id='" + datalist_name + "'>"
-    for (var i = 0; i < state.length; i++) {
-        datalist_return += "<option value='" + state[i].god_name + "'>";
-    }
-    datalist_return += '</datalist>'
-    return datalist_return;
-};
 
-class Create_Datalists extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { gods: data.character_creation[0].faith };
+var Create_options = (props) => {
+    var options = []
+    var length_var = props.option_type.length
+    console.log(props.option_type);
+    for(var i=0; i<length_var;i++)
+    {
+        options.push(<option value={props.option_type[i]}/>)
     }
-
-    render() {
-        var data = create_datalists_function(this.state.gods, "character_god_name")
-        return <div
-            dangerouslySetInnerHTML={{ __html: data }}
-        />
-    }
+    return options
 }
+
 class Basic_Stats extends React.Component {
 
 
@@ -101,9 +91,9 @@ class Basic_Stats extends React.Component {
                         <td><input list='character_prophecy' name='character_prophecy' maxLength="16" /> </td>
                     </tr>
                 </table>
-                <div id="basic_stats_datalists">
-                    <Create_Datalists />
-                </div>
+                <datalist id='character_god_name'>
+                    <Create_options option_type={data.character_creation.faith}/>
+                </datalist>
             </form>
         </div>;
     }

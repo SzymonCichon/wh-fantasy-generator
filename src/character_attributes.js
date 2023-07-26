@@ -3,23 +3,16 @@ import './App.css';
 import data from './data.json';
 
 class Character_Attributes extends React.Component {
+    
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
-        this.WS0 = 0
-        this.BS0 = 0
-        this.S0 = 0
-        this.T0 = 0
-        this.AG0 = 0
-        this.INT0 = 0
-        this.WP0 = 0
-        this.FEL0 = 0
     }
     handleChange(e) {
-        console.log(e.target.value);
-        
-        this.setState({[e.target.name]: e.target.value});
-
+        if(e.target.name == "WS0")
+        {
+            
+        }
     }
     render() {
         return <div id='character_attributes' class = 'Main_Div'>
@@ -41,14 +34,14 @@ class Character_Attributes extends React.Component {
                     </tr>
                     <tr>
                         <td><label>Wartość początkowa</label></td>  
-                        <td><input type='number' name='WS0' min="0" max = "100" value = {this.WS0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='BS0' min="0" max = "100" value = {this.BS0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='S0' min="0" max = "100"value = {this.S0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='T0' min="0" max = "100"value = {this.T0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='AG0' min="0" max = "100"value = {this.AG0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='INT0' min="0" max = "100"value = {this.INT0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='WP0' min="0" max = "100"value = {this.WP0} onChange={this.handleChange}/> </td>
-                        <td><input type='number' name='FEL0' min="0" max = "100"value = {this.FEL0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='WS0' min="0" max = "100" value = "0" onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='BS0' min="0" max = "100" value = {this.stats["BS0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='S0' min="0" max = "100"value = {this.stats["S0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='T0' min="0" max = "100"value = {this.stats["T0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='AG0' min="0" max = "100"value = {this.stats["AG0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='INT0' min="0" max = "100"value = {this.stats["INT0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='WP0' min="0" max = "100"value = {this.stats["WP0"]} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='FEL0' min="0" max = "100"value = {this.stats["FEL0"]} onChange={this.handleChange}/> </td>
                     </tr>
                     <tr>
                         <td><label>Zdolności</label></td>  

@@ -1,16 +1,10 @@
 {
-    "character_creation": [
-        {
-            "faith": [
-                {
-                    "god_name": "Sigmar"
-                },
-                {
-                    "god_name": "Urlic"
-                }
-            ]
-        }
-    ],
+    "character_creation": {
+        "faith": [
+            "Sigmar",
+            "Urlic"
+        ]
+    },
     "skills": {
         "skill_generation_input_name": [
             "AC",

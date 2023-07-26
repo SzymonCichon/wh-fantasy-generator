@@ -5,7 +5,6 @@ import data from './data.json';
 class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {gods: data.character_creation[0].faith};
     }
     
     render() {
