@@ -167,11 +167,15 @@ class Character_Attributes extends React.Component {
     {
         var a = parseInt(this.state.S0)+parseInt(this.state.S1)+parseInt(this.state.S3)+parseInt(this.state.S4)
         this.setState({S5 : a})
+        a = Math.floor(a/10)
+        this.setState({SB0 : a})
     }
     SetT = () =>
     {
         var a = parseInt(this.state.T0)+parseInt(this.state.T1)+parseInt(this.state.T3)+parseInt(this.state.T4)
         this.setState({T5 : a})
+        a = Math.floor(a/10)
+        this.setState({TB0 : a})
     }
     SetAG = () =>
     {
@@ -192,6 +196,46 @@ class Character_Attributes extends React.Component {
     {
         var a = parseInt(this.state.FEL0)+parseInt(this.state.FEL1)+parseInt(this.state.FEL3)+parseInt(this.state.FEL4)
         this.setState({FEL5 : a})
+    }
+    SetA = () =>
+    {
+        var a = parseInt(this.state.A0)+parseInt(this.state.A1)+parseInt(this.state.A3)+parseInt(this.state.A4)
+        this.setState({A5 : a})
+    }
+    SetW = () =>
+    {
+        var a = parseInt(this.state.W0)+parseInt(this.state.W1)+parseInt(this.state.W3)+parseInt(this.state.W4)
+        this.setState({W5 : a})
+    }
+    SetSB = () =>
+    {
+        var a = parseInt(this.state.SB0)+parseInt(this.state.SB4)
+        this.setState({SB5 : a})
+    }
+    SetTB = () =>
+    {
+        var a = parseInt(this.state.TB0)+parseInt(this.state.TB4)
+        this.setState({TB5 : a})
+    }
+    SetM = () =>
+    {
+        var a = parseInt(this.state.M0)+parseInt(this.state.M1)+parseInt(this.state.M3)+parseInt(this.state.M4)
+        this.setState({M5 : a})
+    }
+    SetMAG = () =>
+    {
+        var a = parseInt(this.state.MAG0)+parseInt(this.state.MAG1)+parseInt(this.state.MAG3)+parseInt(this.state.MAG4)
+        this.setState({MAG5 : a})
+    }
+    SetIP = () =>
+    {
+        var a = parseInt(this.state.IP0)+parseInt(this.state.IP4)
+        this.setState({IP5 : a})
+    }
+    SetFP = () =>
+    {
+        var a = parseInt(this.state.FP0)+parseInt(this.state.FP4)
+        this.setState({FP5 : a})
     }
     
     handleChange(e) {
@@ -337,6 +381,124 @@ class Character_Attributes extends React.Component {
                 this.SetFEL()
             });
         }
+
+
+        if (e.target.name == "A0") {
+            this.setState({ A0: e.target.value }, () => {
+                this.SetA()
+            });
+        }
+        if (e.target.name == "A3") {
+            if (this.state.A2 >= e.target.value)
+            this.setState({ A3: e.target.value }, () => {
+                this.SetA()
+            });
+        }
+        if (e.target.name == "A4") {
+            this.setState({ A4: e.target.value }, () => {
+                this.SetA()
+            });
+        }
+
+
+        if (e.target.name == "W0") {
+            this.setState({ W0: e.target.value }, () => {
+                this.SetW()
+            });
+        }
+        if (e.target.name == "W3") {
+            if (this.state.W2 >= e.target.value)
+            this.setState({ W3: e.target.value }, () => {
+                this.SetW()
+            });
+        }
+        if (e.target.name == "W4") {
+            this.setState({ W4: e.target.value }, () => {
+                this.SetW()
+            });
+        }
+
+
+        if (e.target.name == "SB0") {
+            this.setState({ SB0: e.target.value }, () => {
+                this.SetSB()
+            });
+        }
+        if (e.target.name == "SB4") {
+            this.setState({ SB4: e.target.value }, () => {
+                this.SetSB()
+            });
+        }
+
+
+        if (e.target.name == "TB0") {
+            this.setState({ TB0: e.target.value }, () => {
+                this.SetTB()
+            });
+        }
+        if (e.target.name == "TB4") {
+            this.setState({ TB4: e.target.value }, () => {
+                this.SetTB()
+            });
+        }
+
+
+        if (e.target.name == "M0") {
+            this.setState({ M0: e.target.value }, () => {
+                this.SetM()
+            });
+        }
+        if (e.target.name == "M3") {
+            if (this.state.M2 >= e.target.value)
+            this.setState({ M3: e.target.value }, () => {
+                this.SetM()
+            });
+        }
+        if (e.target.name == "M4") {
+            this.setState({ M4: e.target.value }, () => {
+                this.SetM()
+            });
+        }
+
+
+        if (e.target.name == "MAG0") {
+            this.setState({ MAG0: e.target.value }, () => {
+                this.SetMAG()
+            });
+        }
+        if (e.target.name == "MAG3") {
+            if (this.state.MAG2 >= e.target.value)
+            this.setState({ MAG3: e.target.value }, () => {
+                this.SetMAG()
+            });
+        }
+        if (e.target.name == "MAG4") {
+            this.setState({ MAG4: e.target.value }, () => {
+                this.SetMAG()
+            });
+        }
+
+
+        if (e.target.name == "IP0") {
+            this.setState({ IP0: e.target.value }, () => {
+                this.SetIP()
+            });
+        }
+        if (e.target.name == "IP4") {
+            this.setState({ IP4: e.target.value }, () => {
+                this.SetIP()
+            });
+        }
+        if (e.target.name == "FP0") {
+            this.setState({ FP0: e.target.value }, () => {
+                this.SetFP()
+            });
+        }
+        if (e.target.name == "FP4") {
+            this.setState({ FP4: e.target.value }, () => {
+                this.SetFP()
+            });
+        }
     }
     
     render() {
@@ -440,69 +602,69 @@ class Character_Attributes extends React.Component {
                     </tr>
                     <tr>
                         <td><label>Wartość początkowa</label></td>  
-                        <td><input type='number' name='A0' min="0" max = "100"/> </td>
-                        <td><input type='number' name='W0' min="0" max = "100"/> </td>
-                        <td><input type='number' name='SB0' min="0" max = "100" disabled/> </td>
-                        <td><input type='number' name='TB0' min="0" max = "100" disabled/> </td>
-                        <td><input type='number' name='M0' min="0" max = "100"/> </td>
-                        <td><input type='number' name='MAG0' min="0" max = "100"/> </td>
-                        <td><input type='number' name='IP0' min="0" max = "100"/> </td>
-                        <td><input type='number' name='FP0' min="0" max = "100"/> </td>
+                        <td><input type='number' name='A0' min="0" max = "100" value={this.state.A0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='W0' min="0" max = "100" value={this.state.W0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='SB0' min="0" max = "100" value={this.state.SB0} onChange={this.handleChange} disabled/> </td>
+                        <td><input type='number' name='TB0' min="0" max = "100" value={this.state.TB0} onChange={this.handleChange} disabled/> </td>
+                        <td><input type='number' name='M0' min="0" max = "100" value={this.state.M0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='MAG0' min="0" max = "100" value={this.state.MAG0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='IP0' min="0" max = "100" value={this.state.IP0} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='FP0' min="0" max = "100" value={this.state.FP0} onChange={this.handleChange}/> </td>
                     </tr>
                     <tr>
                         <td><label>Zdolności</label></td>  
-                        <td><input disabled type='number' name='A1' min="0" max = "100"/> </td>
-                        <td><input type='number' name='W1' min="0" max = "100" disabled/> </td>
+                        <td><input disabled type='number' name='A1' min="0" max = "100" value={this.state.A1} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='W1' min="0" max = "100" disabled value={this.state.W1} onChange={this.handleChange}/> </td>
                         <td></td>
                         <td> </td>
-                        <td><input disabled type='number' name='M1' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='MAG1' min="0" max = "100"/> </td>
+                        <td><input disabled type='number' name='M1' min="0" max = "100" value={this.state.M1} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='MAG1' min="0" max = "100" value={this.state.MAG1} onChange={this.handleChange}/> </td>
                         <td> </td>
                         <td> </td>
                     </tr>
                     <tr>
                         <td><label>Maksymalny rozwój</label></td>  
-                        <td><input type='number' name='A2' min="0" max = "100" disabled/> </td>
-                        <td><input type='number' name='W2' min="0" max = "100" disabled/> </td>
+                        <td><input type='number' name='A2' min="0" max = "100" disabled value={this.state.A2}/> </td>
+                        <td><input type='number' name='W2' min="0" max = "100" disabled value={this.state.W2}/> </td>
                         <td></td>
                         <td></td>
-                        <td><input type='number' name='M2' min="0" max = "100" disabled/> </td>
-                        <td><input type='number' name='MAG2' min="0" max = "100" disabled/> </td>
+                        <td><input type='number' name='M2' min="0" max = "100" disabled value={this.state.M2}/> </td>
+                        <td><input type='number' name='MAG2' min="0" max = "100" disabled value={this.state.MAG2} /> </td>
                         <td> </td>
                         <td> </td>
                     </tr>
                     <tr>
                         <td><label>Aktualny rozwój</label></td>  
-                        <td><input type='number' name='A3' min="0" max = "100"/> </td>
-                        <td><input type='number' name='W3' min="0" max = "100"/> </td>
+                        <td><input type='number' name='A3' min="0" max = "100" value={this.state.A3} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='W3' min="0" max = "100" value={this.state.W3} onChange={this.handleChange}/> </td>
                         <td></td>
                         <td> </td>
-                        <td><input type='number' name='M3' min="0" max = "100"/> </td>
-                        <td><input type='number' name='MAG3' min="0" max = "100"/> </td>
+                        <td><input type='number' name='M3' min="0" max = "100" value={this.state.M3} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='MAG3' min="0" max = "100" value={this.state.MAG3} onChange={this.handleChange}/> </td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td><label>Modyfikatory</label></td>  
-                        <td><input type='number' name='A4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='W4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='SB4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='TB4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='M4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='MAG4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='IP4' min="0" max = "100"/> </td>
-                        <td><input type='number' name='FP4' min="0" max = "100"/> </td>
+                        <td><input type='number' name='A4' min="0" max = "100" value={this.state.A4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='W4' min="0" max = "100" value={this.state.W4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='SB4' min="0" max = "100" value={this.state.SB4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='TB4' min="0" max = "100" value={this.state.TB4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='M4' min="0" max = "100" value={this.state.M4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='MAG4' min="0" max = "100" value={this.state.MAG4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='IP4' min="0" max = "100" value={this.state.IP4} onChange={this.handleChange}/> </td>
+                        <td><input type='number' name='FP4' min="0" max = "100" value={this.state.FP4} onChange={this.handleChange}/> </td>
                     </tr>
                     <tr>
                         <td><label>Aktualna wartość</label></td>  
-                        <td><input disabled type='number' name='A5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='W5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='SB5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='TB5' min="0" max = "100"/> </td>
-                        <td><input  disabled type='number' name='M5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='MAG5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='IP5' min="0" max = "100"/> </td>
-                        <td><input disabled type='number' name='FP5' min="0" max = "100"/> </td>
+                        <td><input disabled type='number' name='A5' min="0" max = "100" value={this.state.A5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='W5' min="0" max = "100" value={this.state.W5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='SB5' min="0" max = "100" value={this.state.SB5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='TB5' min="0" max = "100" value={this.state.TB5} onChange={this.handleChange}/> </td>
+                        <td><input  disabled type='number' name='M5' min="0" max = "100" value={this.state.M5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='MAG5' min="0" max = "100" value={this.state.MAG5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='IP5' min="0" max = "100" value={this.state.IP5} onChange={this.handleChange}/> </td>
+                        <td><input disabled type='number' name='FP5' min="0" max = "100" value={this.state.FP5} onChange={this.handleChange}/> </td>
                     </tr>
                 </table>
             </form>
