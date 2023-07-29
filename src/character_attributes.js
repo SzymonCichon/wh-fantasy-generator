@@ -13,15 +13,48 @@ var Create_Datalists_Class = (props) => {
 }
 
 var Component_for_skills = (props) => {
-    return <tr>
-        <td className='attribute_names'><label>{data.skills.skill_generation_polish_names.skill_names[props.number] }</label></td>
-        <td className='skill_attribute'><label>{data.skills.skill_generation_polish_names.stat_names[props.number]}</label></td>
-        <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[props.number] + 0} min='0' max = '100' disabled value={props.current_state}/> </td>
-        <td className='skill_attribute'><input list='skill_percentage' name={data.skills.skill_generation_input_name[props.number] + 1} /> </td>
-        <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[props.number] + 2} min='0' max = '100' disabled/> </td>
-        <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[props.number] + 3} min='0' max = '100' /> </td>
-        <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[props.number] + 4} min='0' max = '100' disabled/> </td>
-    </tr>
+    var component_for_skills_return = []
+    for(var i =0; i<20; i++)
+    {
+        var a = i+  props.number*10
+        var base_attribute
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "K")
+        {
+            base_attribute = props.current_states.S5
+        }
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "Odp")
+        {
+            base_attribute = props.current_states.T5
+        }
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "Zr")
+        {
+            base_attribute = props.current_states.AG5
+        }
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "Int")
+        {
+            base_attribute = props.current_states.INT5
+        }
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "SW")
+        {
+            base_attribute = props.current_states.WP5
+        }
+        if (data.skills.skill_generation_polish_names.stat_names[a] === "Ogd")
+        {
+            base_attribute = props.current_states.FEL5
+        }        
+        component_for_skills_return.push(<tr>
+            <td className='attribute_names'><label>{data.skills.skill_generation_polish_names.skill_names[a] }</label></td>
+            <td className='skill_attribute'><label>{data.skills.skill_generation_polish_names.stat_names[a]}</label></td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 0} min='0' max = '100' disabled value={base_attribute}/> </td>
+            <td className='skill_attribute'><input list='skill_percentage' name={data.skills.skill_generation_input_name[a] + 1} /> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 2} min='0' max = '100' disabled/> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 3} min='0' max = '100' /> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 4} min='0' max = '100' disabled/> </td>
+        </tr>)
+    }
+     
+
+    return component_for_skills_return
 }
 
 //Generating extra professions slots
@@ -684,7 +717,6 @@ class Character_Attributes extends React.Component {
             </form>
         </div>
         <div id = 'skills' class = 'Main_Div'>
-            
              <form>
                 <table className='stats_table'>
                     <tbody>
@@ -700,49 +732,11 @@ class Character_Attributes extends React.Component {
                         <td >Inne</td>
                         <td >Suma</td>
                     </tr>
-                    <Component_for_skills  number={0} current_state={this.state.S0}/>
-                    <Component_for_skills  number={1} current_state={this.state.S1}/>
-                    <Component_for_skills  number={2} current_state={this.state.S2}/>
-                    <Component_for_skills  number={3} current_state={this.state.S3}/>
-                    <Component_for_skills  number={4} current_state={this.state.S4}/>
-                    <Component_for_skills  number={5} current_state={this.state.S5}/>
-                    <Component_for_skills  number={6} current_state={this.state.S6}/>
-                    <Component_for_skills  number={7} current_state={this.state.S7}/>
-                    <Component_for_skills  number={8} current_state={this.state.S8}/>
-                    <Component_for_skills  number={9} current_state={this.state.S9}/>
-                    <Component_for_skills  number={10} current_state={this.state.S10}/>
-                    <Component_for_skills  number={11} current_state={this.state.S11}/>
-                    <Component_for_skills  number={12} current_state={this.state.S12}/>
-                    <Component_for_skills  number={13} current_state={this.state.S13}/>
-                    <Component_for_skills  number={14} current_state={this.state.S14}/>
-                    <Component_for_skills  number={15} current_state={this.state.S15}/>
-                    <Component_for_skills  number={16} current_state={this.state.S16}/>
-                    <Component_for_skills  number={17} current_state={this.state.S17}/>
-                    <Component_for_skills  number={18} current_state={this.state.S18}/>
-                    <Component_for_skills  number={19} current_state={this.state.S19}/>
+                    <Component_for_skills current_states = {this.state} number = "0"/>
                     <tr>
                         <th colSpan='7'>Umiejętności zaawansowane</th>
                     </tr>
-                    <Component_for_skills  number={20} current_state={this.state.S20}/>
-                    <Component_for_skills  number={21} current_state={this.state.S21}/>
-                    <Component_for_skills  number={22} current_state={this.state.S22}/>
-                    <Component_for_skills  number={23} current_state={this.state.S23}/>
-                    <Component_for_skills  number={24} current_state={this.state.S24}/>
-                    <Component_for_skills  number={25} current_state={this.state.S25}/>
-                    <Component_for_skills  number={26} current_state={this.state.S26}/>
-                    <Component_for_skills  number={27} current_state={this.state.S27}/>
-                    <Component_for_skills  number={28} current_state={this.state.S28}/>
-                    <Component_for_skills  number={29} current_state={this.state.S29}/>
-                    <Component_for_skills  number={30} current_state={this.state.S30}/>
-                    <Component_for_skills  number={31} current_state={this.state.S31}/>
-                    <Component_for_skills  number={32} current_state={this.state.S32}/>
-                    <Component_for_skills  number={33} current_state={this.state.S33}/>
-                    <Component_for_skills  number={34} current_state={this.state.S34}/>
-                    <Component_for_skills  number={35} current_state={this.state.S35}/>
-                    <Component_for_skills  number={36} current_state={this.state.S36}/>
-                    <Component_for_skills  number={37} current_state={this.state.S37}/>
-                    <Component_for_skills  number={38} current_state={this.state.S38}/>
-                    <Component_for_skills  number={39} current_state={this.state.S39}/>
+                    <Component_for_skills current_states= {this.state} number = "1"/>
                     <datalist id='skill_percentage'>
                         <option value='+0%'/>
                         <option value='+10%'/>
