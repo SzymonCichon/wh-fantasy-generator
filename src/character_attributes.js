@@ -8,15 +8,42 @@ var Create_Datalists_Class = (props) => {
     {
         options.push(<option value={data.professions.polish.profession_names[i] }/>)
     }
-    
-        return options
+    return options
 }
+var Options_For_Profesions = (props) => {
+    var options = []
+    var value = []
+    for(var i = 0; i<data.professions.polish.profession_names.length;i++)
+    {
+        options.push(<option value={data.professions.polish.profession_names[i] }/>)
+    }
+    return options
+}
+
 
 var Component_for_skills = (props) => {
     var component_for_skills_return = []
+    var profession_level = props.current_states.SkillsFromProfession1.split("");
+    console.log(profession_level);
+    
     for(var i =0; i<20; i++)
     {
         var a = i+  props.number*10
+        var to_send = "0"
+        if(profession_level[i] == "0")
+        {
+            to_send = "-50%"
+        }
+        else if (profession_level[i] == "1")
+        {
+            to_send = "+0"
+        }
+        else
+        {
+            profession_level[i] = (profession_level[i]-1)*10
+            to_send = "+" + profession_level[i]
+        }
+        
         var base_attribute
         if (data.skills.skill_generation_polish_names.stat_names[a] === "K")
         {
@@ -46,10 +73,11 @@ var Component_for_skills = (props) => {
             <td className='attribute_names'><label>{data.skills.skill_generation_polish_names.skill_names[a] }</label></td>
             <td className='skill_attribute'><label>{data.skills.skill_generation_polish_names.stat_names[a]}</label></td>
             <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 0} min='0' max = '100' disabled value={base_attribute}/> </td>
+            <td className='skill_attribute'><input type='text' name={data.skills.skill_generation_input_name[a] + 2} min='0' max = '100' disabled value={to_send}/> </td>
             <td className='skill_attribute'><input list='skill_percentage' name={data.skills.skill_generation_input_name[a] + 1} /> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 2} min='0' max = '100' disabled/> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 3} min='0' max = '100' /> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 4} min='0' max = '100' disabled/> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 3} min='0' max = '100' disabled/> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 4} min='0' max = '100' /> </td>
+            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 5} min='0' max = '100' disabled/> </td>
         </tr>)
     }
      
@@ -183,6 +211,8 @@ class Character_Attributes extends React.Component {
             FP0 : 0,
             FP4 : 0,
             FP5 : 0,
+            SkillsFromProfession1 : "01230000000000000000",
+            SkillsFromProfession2 : "aaaaaaaaaaaaaaaaaaaa"
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -727,6 +757,7 @@ class Character_Attributes extends React.Component {
                         <td >Nazwa</td>
                         <td >Cecha</td>
                         <td >Baza</td>
+                        <td >Profesja</td>
                         <td >Poziom</td>
                         <td >Zdolności</td>
                         <td >Inne</td>
@@ -738,9 +769,10 @@ class Character_Attributes extends React.Component {
                     </tr>
                     <Component_for_skills current_states= {this.state} number = "1"/>
                     <datalist id='skill_percentage'>
-                        <option value='+0%'/>
-                        <option value='+10%'/>
-                        <option value='+20%'/>
+                        <option value='-50%'/>
+                        <option value='+0'/>
+                        <option value='+10'/>
+                        <option value='+20'/>
                     </datalist>
 
 
