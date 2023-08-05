@@ -12,10 +12,19 @@ var Create_Datalists_Class = (props) => {
 }
 var Options_For_Profesions = (props) => {
     var options = []
-    var value = []
-    for(var i = 0; i<data.professions.polish.profession_names.length;i++)
+    var value = [-50, 0, 10, 20]
+    var until = parseInt(props.number)
+    for(var i = 0; i<(until+1);i++)
     {
-        options.push(<option value={data.professions.polish.profession_names[i] }/>)
+        if(i == 0 )
+        {
+            options.push(<option value={i}>{value[i] + "%"}</option>)
+        }
+        else
+        {
+            options.push(<option value={i}>{value[i]}</option>)
+        }
+        
     }
     return options
 }
@@ -23,9 +32,16 @@ var Options_For_Profesions = (props) => {
 
 var Component_for_skills = (props) => {
     var component_for_skills_return = []
-    var profession_level = props.current_states.SkillsFromProfession1.split("");
-    console.log(profession_level);
-    
+    if(props.number == 0)
+    {
+        var profession_level = props.current_states.SkillsFromProfession1.split("");
+        var skill_levels = props.current_states.SkillsLevels1.split("");
+    }
+    else
+    {
+        var profession_level = props.current_states.SkillsFromProfession2.split("");
+        var skill_levels = props.current_states.SkillsLevels1.split("");
+    }
     for(var i =0; i<20; i++)
     {
         var a = i+  props.number*10
@@ -40,8 +56,7 @@ var Component_for_skills = (props) => {
         }
         else
         {
-            profession_level[i] = (profession_level[i]-1)*10
-            to_send = "+" + profession_level[i]
+            to_send = "+" + (profession_level[i]-1)*10
         }
         
         var base_attribute
@@ -72,16 +87,17 @@ var Component_for_skills = (props) => {
         component_for_skills_return.push(<tr>
             <td className='attribute_names'><label>{data.skills.skill_generation_polish_names.skill_names[a] }</label></td>
             <td className='skill_attribute'><label>{data.skills.skill_generation_polish_names.stat_names[a]}</label></td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 0} min='0' max = '100' disabled value={base_attribute}/> </td>
-            <td className='skill_attribute'><input type='text' name={data.skills.skill_generation_input_name[a] + 2} min='0' max = '100' disabled value={to_send}/> </td>
-            <td className='skill_attribute'><input list='skill_percentage' name={data.skills.skill_generation_input_name[a] + 1} /> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 3} min='0' max = '100' disabled/> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 4} min='0' max = '100' /> </td>
-            <td className='skill_attribute'><input type='number' name={data.skills.skill_generation_input_name[a] + 5} min='0' max = '100' disabled/> </td>
+            <td className='skill_attribute'><input type='number' name={"Skill_name_"+ props.number +"_" + i + "_" + 0} min='0' max = '100' disabled value={base_attribute} onChange={props.current_states.handleChange}/> </td>
+            <td className='skill_attribute'><input type='text' name={"Skill_name_"+ props.number +"_" + i + "_"  + 1} min='0' max = '100' disabled value={to_send}/> </td>
+            <td className='skill_attribute'><select name={"Skill_name_"+ props.number +"_" + i + "_"  + 2} value={skill_levels[i]} onChange={props.current_states.handleChange}> 
+                <Options_For_Profesions number = {profession_level[i]}/>
+            </select>
+            </td> 
+            <td className='skill_attribute'><input type='number' name={"Skill_name_"+ props.number +"_" + i + "_"  + 3} min='0' max = '100' disabled/> </td>
+            <td className='skill_attribute'><input type='number' name={"Skill_name_"+ props.number +"_" + i + "_"  + 4} min='0' max = '100' onChange={props.current_states.handleChange}/> </td>
+            <td className='skill_attribute'><input type='number' name={"Skill_name_"+ props.number +"_" + i + "_"  + 5} min='0' max = '100' disabled/> </td>
         </tr>)
     }
-     
-
     return component_for_skills_return
 }
 
@@ -94,8 +110,6 @@ class Add_more_profesions extends React.Component{
     handleClick()
     {
         var add_more_profesions = document.getElementById("add_more_profesions")
-       
-        console.log("Bla bla bla");
         var row = document.createElement("tr");
 
         var number_of_rows = parseInt(add_more_profesions.dataset.rows)
@@ -212,7 +226,9 @@ class Character_Attributes extends React.Component {
             FP4 : 0,
             FP5 : 0,
             SkillsFromProfession1 : "01230000000000000000",
-            SkillsFromProfession2 : "aaaaaaaaaaaaaaaaaaaa"
+            SkillsFromProfession2 : "32100000000000000000",
+            SkillsLevels1 : "32100000000000000000",
+            SkillsLevels2 : "32100000000000000000"
         }
         this.handleChange = this.handleChange.bind(this);
     }
@@ -300,7 +316,10 @@ class Character_Attributes extends React.Component {
         var a = parseInt(this.state.FP0)+parseInt(this.state.FP4)
         this.setState({FP5 : a})
     }
-    
+    SetSkill = () => 
+    {
+
+    }
     handleChange(e) {
         if (e.target.name == "WS0") {
             this.setState({ WS0: e.target.value }, () => {
@@ -562,6 +581,7 @@ class Character_Attributes extends React.Component {
                 this.SetFP()
             });
         }
+
     }
     
     render() {
@@ -768,12 +788,6 @@ class Character_Attributes extends React.Component {
                         <th colSpan='7'>Umiejętności zaawansowane</th>
                     </tr>
                     <Component_for_skills current_states= {this.state} number = "1"/>
-                    <datalist id='skill_percentage'>
-                        <option value='-50%'/>
-                        <option value='+0'/>
-                        <option value='+10'/>
-                        <option value='+20'/>
-                    </datalist>
 
 
                     </tbody>
