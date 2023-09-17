@@ -24,6 +24,14 @@ th
 {
   text-align: center;
 }
+select
+{
+  font-size: auto;
+  width: 90%;
+  height: 2.5vh;
+  background: Bisque;
+  border-color: BurlyWood;
+}
 
 .Main_Div
 {
@@ -107,4 +115,10 @@ th
 {
   position: absolute;
   top:200%
+}
+
+#create_json_div
+{
+  position: absolute;
+  top: 200%;
 }

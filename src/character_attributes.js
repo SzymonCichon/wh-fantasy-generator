@@ -3,10 +3,19 @@ import './App.css';
 import data from './data.json';
 import Component_for_skills from './component_for_skills.js'
 //Creating object creating datalists for professions
-var Create_Datalists_Class = (props) => {
+var Create_Options_Class = (props) => {
     var options = []
-    for (var i = 0; i < data.professions.polish.profession_names.length; i++) {
-        options.push(<option value={data.professions.polish.profession_names[i]} />)
+    var ill = 0
+    if(props.number ==0)
+    {
+        ill = 57
+    }
+    if(props.number == 1)
+    {
+        ill = 52
+    }
+    for (var i = 0; i < ill; i++) {
+        options.push(<option value={data.polish.profession.names[props.number][i].name}>{data.polish.profession.names[props.number][i].name}</option>)
     }
     return options
 }
@@ -14,33 +23,55 @@ var Create_Datalists_Class = (props) => {
 class Add_more_profesions extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state = {
+            number_of_professions : 1,
+            values_of_professions : [""]
+        }
+        this.handleClick = this.handleClick.bind(this);
+        this.create_more_professions = this.create_more_professions.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
     handleClick() {
-        var add_more_profesions = document.getElementById("add_more_profesions")
-        var row = document.createElement("tr");
-
-        var number_of_rows = parseInt(add_more_profesions.dataset.rows)
-
-        var c1 = document.createElement("td");
-        c1.innerHTML = "Profesja " + (number_of_rows + 1)
-
-
-
-        var c2 = document.createElement("td");
-        c2.innerHTML = "<input list='professions' name='prof" + number_of_rows + "' />"
-
-        row.appendChild(c1)
-        row.appendChild(c2)
-        add_more_profesions.dataset.rows = number_of_rows + 1
-
-        document.getElementById("professions_table").appendChild(row)
+        var a = this.state.number_of_professions + 1 
+        this.setState({number_of_professions : a})
+        var b = this.state.values_of_professions
+        b[this.state.values_of_professions.length] = ""
+        this.setState({values_of_professions : b})
+    }
+    handleChange(e)
+    {
+       var array = this.state.values_of_professions
+       array[e.target.id.substr(-1,1)] = e.target.value
+       this.setState({values_of_professions : array})
+        console.log(this.state.values_of_professions);
+    }
+    create_more_professions(number) {
+        var return_profesions = []
+        for (var i = 0; i < number; i++) {
+            return_profesions.push(
+                <tr>
+                    <td>Profesja {i + 1}</td>
+                    <td><select value={this.state.values_of_professions[i]} onChange={this.handleChange} id = {"prof"+i} >
+                        <optgroup label="Profesje podstawowe"><Create_Options_Class number = "0"/></optgroup>
+                        <optgroup label="Profesje zaawansowane"><Create_Options_Class number = "1"/></optgroup>
+                    </select>
+                    </td>
+                </tr>
+            )
+        }
+        
+    return return_profesions
     }
     render() {
-        return <tr>
+        return <table id='professions_table' className='stats_table'>
+            <tr>
             <th >Profesje</th>
             <td><input type='button' id="add_more_profesions" value="+" onClick={this.handleClick} data-rows="1" /></td>
-        </tr>
+            </tr>
+            {this.create_more_professions(this.state.number_of_professions)}
+            
+            </table>
+        
     }
 }
 
@@ -65,18 +96,13 @@ class Character_Attributes extends React.Component {
             IP: [0, 0, 0, 0, 0, 0],
             FP: [0, 0, 0, 0, 0, 0],
             SkillsFromProfession: [[0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
-            handler : ''
+            Basestatsforskills:[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
         }
         this.handleChange = this.handleChange.bind(this);
-    }
-    handling_component_for_skills()
-    {
-
     }
     handleChange(e) {
         var starting_target = e.target.name.substr(0, 2)
         var target_number = e.target.name.substr(2, 3)
-        console.log("change");
         if (starting_target == "WS") {
             var a = this.state.WS
             a[target_number] = e.target.value
@@ -233,11 +259,8 @@ class Character_Attributes extends React.Component {
                 });
             }
         }
-        if (starting_target == "Sk") {
-            console.log("skill")
-        }
     }
-
+    
     render() {
         return <div>
             <div id='character_attributes' class='Main_Div'>
@@ -408,16 +431,7 @@ class Character_Attributes extends React.Component {
             </div>
             <div id='Professions' className='Main_Div'>
                 <form>
-                    <table id='professions_table' className='stats_table'>
-                        <Add_more_profesions />
-                        <tr>
-                            <td>Profesja 1</td>
-                            <td><input list='professions' name='prof0' /></td>
-                        </tr>
-                    </table>
-                    <datalist id='professions'>
-                        <Create_Datalists_Class />
-                    </datalist>
+                    <Add_more_profesions />
                 </form>
             </div>
             <div id='skills' class='Main_Div'>
@@ -442,11 +456,11 @@ class Character_Attributes extends React.Component {
                                 <th colSpan='7'>Umiejętności zaawansowane</th>
                             </tr>
                             <Component_for_skills current_states={this.state} number="1" />
-                            <div id="Event_catcher">Brak_id</div>
                         </tbody>
                     </table>
                 </form>
             </div>
+            
         </div>
     }
 }

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Basic_Stats from'./basic_stats.js'
 import Header from'./header'
 import Character_Attributes from './character_attributes.js'
+import Create_json from './create_json.js'
 import Skills from './skills';
 import Profession from './profession';
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,7 @@ root.render(
     <Header />
     <Basic_Stats />
     <Character_Attributes />
-
+    <Create_json />
   </React.StrictMode>
 );
 

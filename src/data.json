@@ -1,12 +1,6 @@
 {
-    "character_creation": {
-        "faith": [
-            "Sigmar",
-            "Urlic"
-        ]
-    },
-    "skills": {
-        "skill_generation_polish_names": {
+    "polish": {
+        "skill_generation": {
             "skill_names": [
                 "Opieka nad zwierzętami",
                 "Przekonywanie",
@@ -91,69 +85,2428 @@
                 "Ogd",
                 "Ogd"
             ]
-        }
-    },
-    "professions": {
-        "polish": {
-            "profession_names": [
-                "Akolita",
-                "Banita",
-                "Berserker z Norski",
-                "Chłop",
-                "Ciura Obozowa",
-                "Cyrkowiec",
-                "Cyrulik",
-                "Fanatyk",
-                "Flisak",
-                "Giermek",
-                "Gladiator",
-                "Goniec",
-                "Górnik",
-                "Guślarz",
-                "Hiena Cmentarna",
-                "Kanciarz",
-                "Kozak kislevski ",
-                "Leśnik",
-                "Łowca nagród ",
-                "Mieszczanin ",
-                "Mytnik",
-                "Najemnik",
-                "Ochotnik",
-                " Ochroniarz",
-                "Oprych ",
-                "Paź",
-                "Podżegacz",
-                "Porywacz zwłok",
-                "Posłaniec",
-                "Przemytnik",
-                "Przepatrywacz ",
-                "Przewoźnik",
-                "Rybak",
-                "Rzecznik rodu ",
-                "Rzemieślnik",
-                "Rzezimieszek ",
-                "Skryba ",
-                "Sługa ",
-                "Strażnik ",
-                "Strażnik dróg ",
-                "Strażnik pól ",
-                "Strażnik więzienny ",
-                "Szczurołap ",
-                "Szermierz estaliiski ",
-                "Szlachcic ",
-                "Smieciarz ",
-                "Tarczownik ",
-                "Uczeń czarodzieja ",
-                "Węglarz ",
-                "Włóczykij ",
-                "Wójownik klanowy ",
-                "Woźnica ",
-                "Zabójca trolli ",
-                "Złodziej ",
-                "Żeglarz ",
-                "Żołnierz",
-                "Żołnierz okrętowy"
+        },
+        "stats": {},
+        "profession": {
+            "names": [
+                [
+                    {
+                        "name": "Akolita",
+                        "hook": "hook0_0"
+                    },
+                    {
+                        "name": "Banita",
+                        "hook": "hook0_1"
+                    },
+                    {
+                        "name": "Berserker z Norski",
+                        "hook": "hook0_2"
+                    },
+                    {
+                        "name": "Chłop",
+                        "hook": "hook0_3"
+                    },
+                    {
+                        "name": "Ciura Obozowa",
+                        "hook": "hook0_4"
+                    },
+                    {
+                        "name": "Cyrkowiec",
+                        "hook": "hook0_5"
+                    },
+                    {
+                        "name": "Cyrulik",
+                        "hook": "hook0_6"
+                    },
+                    {
+                        "name": "Fanatyk",
+                        "hook": "hook0_7"
+                    },
+                    {
+                        "name": "Flisak",
+                        "hook": "hook0_8"
+                    },
+                    {
+                        "name": "Giermek",
+                        "hook": "hook0_9"
+                    },
+                    {
+                        "name": "Gladiator",
+                        "hook": "hook0_10"
+                    },
+                    {
+                        "name": "Goniec",
+                        "hook": "hook0_11"
+                    },
+                    {
+                        "name": "Górnik",
+                        "hook": "hook0_12"
+                    },
+                    {
+                        "name": "Guślarz",
+                        "hook": "hook0_13"
+                    },
+                    {
+                        "name": "Hiena Cmentarna",
+                        "hook": "hook0_14"
+                    },
+                    {
+                        "name": "Kanciarz",
+                        "hook": "hook0_15"
+                    },
+                    {
+                        "name": "Kozak kislevski ",
+                        "hook": "hook0_16"
+                    },
+                    {
+                        "name": "Leśnik",
+                        "hook": "hook0_17"
+                    },
+                    {
+                        "name": "Łowca nagród ",
+                        "hook": "hook0_18"
+                    },
+                    {
+                        "name": "Mieszczanin ",
+                        "hook": "hook0_19"
+                    },
+                    {
+                        "name": "Mytnik",
+                        "hook": "hook0_20"
+                    },
+                    {
+                        "name": "Najemnik",
+                        "hook": "hook0_21"
+                    },
+                    {
+                        "name": "Ochotnik",
+                        "hook": "hook0_22"
+                    },
+                    {
+                        "name": " Ochroniarz",
+                        "hook": "hook0_23"
+                    },
+                    {
+                        "name": "Oprych ",
+                        "hook": "hook0_24"
+                    },
+                    {
+                        "name": "Paź",
+                        "hook": "hook0_25"
+                    },
+                    {
+                        "name": "Podżegacz",
+                        "hook": "hook0_26"
+                    },
+                    {
+                        "name": "Porywacz zwłok",
+                        "hook": "hook0_27"
+                    },
+                    {
+                        "name": "Posłaniec",
+                        "hook": "hook0_28"
+                    },
+                    {
+                        "name": "Przemytnik",
+                        "hook": "hook0_29"
+                    },
+                    {
+                        "name": "Przepatrywacz ",
+                        "hook": "hook0_30"
+                    },
+                    {
+                        "name": "Przewoźnik",
+                        "hook": "hook0_31"
+                    },
+                    {
+                        "name": "Rybak",
+                        "hook": "hook0_32"
+                    },
+                    {
+                        "name": "Rzecznik rodu ",
+                        "hook": "hook0_33"
+                    },
+                    {
+                        "name": "Rzemieślnik",
+                        "hook": "hook0_34"
+                    },
+                    {
+                        "name": "Rzezimieszek ",
+                        "hook": "hook0_35"
+                    },
+                    {
+                        "name": "Skryba ",
+                        "hook": "hook0_36"
+                    },
+                    {
+                        "name": "Sługa ",
+                        "hook": "hook0_37"
+                    },
+                    {
+                        "name": "Strażnik ",
+                        "hook": "hook0_38"
+                    },
+                    {
+                        "name": "Strażnik dróg ",
+                        "hook": "hook0_39"
+                    },
+                    {
+                        "name": "Strażnik pól ",
+                        "hook": "hook0_40"
+                    },
+                    {
+                        "name": "Strażnik więzienny ",
+                        "hook": "hook0_41"
+                    },
+                    {
+                        "name": "Szczurołap ",
+                        "hook": "hook0_42"
+                    },
+                    {
+                        "name": "Szermierz estaliiski ",
+                        "hook": "hook0_43"
+                    },
+                    {
+                        "name": "Szlachcic ",
+                        "hook": "hook0_44"
+                    },
+                    {
+                        "name": "Smieciarz ",
+                        "hook": "hook0_45"
+                    },
+                    {
+                        "name": "Tarczownik ",
+                        "hook": "hook0_46"
+                    },
+                    {
+                        "name": "Uczeń czarodzieja ",
+                        "hook": "hook0_47"
+                    },
+                    {
+                        "name": "Węglarz ",
+                        "hook": "hook0_48"
+                    },
+                    {
+                        "name": "Włóczykij ",
+                        "hook": "hook0_49"
+                    },
+                    {
+                        "name": "Wójownik klanowy ",
+                        "hook": "hook0_50"
+                    },
+                    {
+                        "name": "Woźnica ",
+                        "hook": "hook0_51"
+                    },
+                    {
+                        "name": "Zabójca trolli ",
+                        "hook": "hook0_52"
+                    },
+                    {
+                        "name": "Złodziej ",
+                        "hook": "hook0_53"
+                    },
+                    {
+                        "name": "Żeglarz ",
+                        "hook": "hook0_54"
+                    },
+                    {
+                        "name": "Żołnierz",
+                        "hook": "hook0_55"
+                    },
+                    {
+                        "name": "Żołnierz okrętowy",
+                        "hook": "hook0_56"
+                    }
+                ],
+                [
+                    {
+                        "name": "Arcykapłan",
+                        "hook": "hook1_0"
+                    },
+                    {
+                        "name": "Arcymag",
+                        "hook": "hook1_1"
+                    },
+                    {
+                        "name": "Arystokrata",
+                        "hook": "hook1_2"
+                    },
+                    {
+                        "name": "Bard",
+                        "hook": "hook1_3"
+                    },
+                    {
+                        "name": "Biczownik",
+                        "hook": "hook1_4"
+                    },
+                    {
+                        "name": "Bosman",
+                        "hook": "hook1_5"
+                    },
+                    {
+                        "name": "Demagog",
+                        "hook": "hook1_6"
+                    },
+                    {
+                        "name": "Dworzanin",
+                        "hook": "hook1_7"
+                    },
+                    {
+                        "name": "Fechmistrz",
+                        "hook": "hook1_8"
+                    },
+                    {
+                        "name": "Herold",
+                        "hook": "hook1_9"
+                    },
+                    {
+                        "name": "Herszt banitów",
+                        "hook": "hook1_10"
+                    },
+                    {
+                        "name": "Kapitan",
+                        "hook": "hook1_11"
+                    },
+                    {
+                        "name": "Kapłan",
+                        "hook": "hook1_12"
+                    },
+                    {
+                        "name": "Karczmarz",
+                        "hook": "hook1_13"
+                    },
+                    {
+                        "name": "Książę złodziei",
+                        "hook": "hook1_14"
+                    },
+                    {
+                        "name": "Kupiec",
+                        "hook": "hook1_15"
+                    },
+                    {
+                        "name": "Leśny duch",
+                        "hook": "hook1_16"
+                    },
+                    {
+                        "name": "Łowca czarownic",
+                        "hook": "hook1_17"
+                    },
+                    {
+                        "name": "Łowca wampirów",
+                        "hook": "hook1_18"
+                    },
+                    {
+                        "name": "Majordomus",
+                        "hook": "hook1_19"
+                    },
+                    {
+                        "name": "Medyk",
+                        "hook": "hook1_20"
+                    },
+                    {
+                        "name": "Mistrz cieni",
+                        "hook": "hook1_21"
+                    },
+                    {
+                        "name": "Mistrz gildii",
+                        "hook": "hook1_22"
+                    },
+                    {
+                        "name": "Mistrz magii",
+                        "hook": "hook1_23"
+                    },
+                    {
+                        "name": "Mistrz rzemiosła",
+                        "hook": "hook1_24"
+                    },
+                    {
+                        "name": "Mistrz zakonny",
+                        "hook": "hook1_25"
+                    },
+                    {
+                        "name": "Nawigator",
+                        "hook": "hook1_26"
+                    },
+                    {
+                        "name": "Odkrywca",
+                        "hook": "hook1_27"
+                    },
+                    {
+                        "name": "Oficer",
+                        "hook": "hook1_28"
+                    },
+                    {
+                        "name": "Oprawca",
+                        "hook": "hook1_29"
+                    },
+                    {
+                        "name": "Paser",
+                        "hook": "hook1_30"
+                    },
+                    {
+                        "name": "Rajtar",
+                        "hook": "hook1_31"
+                    },
+                    {
+                        "name": "Reketer",
+                        "hook": "hook1_32"
+                    },
+                    {
+                        "name": "Rozbójnik",
+                        "hook": "hook1_33"
+                    },
+                    {
+                        "name": "Rycerz",
+                        "hook": "hook1_34"
+                    },
+                    {
+                        "name": "Sierżant",
+                        "hook": "hook1_35"
+                    },
+                    {
+                        "name": "Skrytobójca",
+                        "hook": "hook1_36"
+                    },
+                    {
+                        "name": "Strzelec",
+                        "hook": "hook1_37"
+                    },
+                    {
+                        "name": "Szampierz",
+                        "hook": "hook1_38"
+                    },
+                    {
+                        "name": "Szarlatan",
+                        "hook": "hook1_39"
+                    },
+                    {
+                        "name": "Szpieg",
+                        "hook": "hook1_40"
+                    },
+                    {
+                        "name": "Uczony",
+                        "hook": "hook1_41"
+                    },
+                    {
+                        "name": "Urzędnik",
+                        "hook": "hook1_42"
+                    },
+                    {
+                        "name": "Weteran",
+                        "hook": "hook1_43"
+                    },
+                    {
+                        "name": "Wędrowny czarodziej",
+                        "hook": "hook1_44"
+                    },
+                    {
+                        "name": "Włamywacz",
+                        "hook": "hook1_45"
+                    },
+                    {
+                        "name": "Wybraniec boży",
+                        "hook": "hook1_46"
+                    },
+                    {
+                        "name": "Zabójca demonów",
+                        "hook": "hook1_47"
+                    },
+                    {
+                        "name": "Zabójca olbrzymów",
+                        "hook": "hook1_48"
+                    },
+                    {
+                        "name": "Zakonnik",
+                        "hook": "hook1_49"
+                    },
+                    {
+                        "name": "Zawadźca",
+                        "hook": "hook1_50"
+                    },
+                    {
+                        "name": "Zwiadowca",
+                        "hook": "hook1_51"
+                    }
+                ]
             ]
         }
+    },
+    "english": {},
+    "character_creation": {
+        "faith": [
+            "Sigmar",
+            "Urlic"
+        ]
+    },
+    "hooks": {
+        "skill_hooks": [
+            [
+                {
+                    "hook": "hook0_0",
+                    "stats": [
+                        10,
+                        2,
+                        5,
+                        2,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        50,
+                        30
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_1",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_2",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_3",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_4",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_5",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_6",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_7",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_8",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_9",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_10",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_11",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_12",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_13",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_14",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_15",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_16",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_17",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_18",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_19",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_20",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_21",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_22",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_23",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_24",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_25",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_26",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_27",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_28",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_29",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_30",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_31",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_32",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_33",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_34",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_35",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_36",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_37",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_38",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_39",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_40",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_41",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_42",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_43",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_44",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_45",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_46",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_47",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_48",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_49",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_50",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_51",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_52",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_53",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_54",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_55",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook0_56",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                }
+            ],
+            [
+                {
+                    "hook": "hook1_0",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_1",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_2",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_3",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_4",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_5",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_6",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_7",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_8",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_9",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_10",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_11",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_12",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_13",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_14",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_15",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_16",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_17",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_18",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_19",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_20",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_21",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_22",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_23",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_24",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_25",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_26",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_27",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_28",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_29",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_30",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_31",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_32",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_33",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_34",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_35",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_36",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_37",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_38",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_39",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_40",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_41",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_42",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_43",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_44",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_45",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_46",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_47",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_48",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_49",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_50",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                },
+                {
+                    "hook": "hook1_51",
+                    "stats": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "skills": []
+                }
+            ]
+        ]
     }
 }
