@@ -10,11 +10,12 @@ class Create_json extends React.Component
             create_json_text : "",
             create_json_text_full : "[",
             send : "",
-            valuesofstats : [0,0,0,0,0,0,0,0,0,0,0,0],
+            valuesofstats : data.hooks.skill_hooks[0][0].stats,
             hook:"Akolita",
             fullhook:"[",
             currentnumber:0,
-            prof_change : "Akolita"
+            prof_change : "Akolita",
+            current_edited_skilltype:0
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleClick = this.handleClick.bind(this)
@@ -85,9 +86,38 @@ class Create_json extends React.Component
     }
     another_prof(e)
     {
-        var a = e.target.value
-        this.setState({prof_change:a})
+        var a = e.target.value;
         
+        
+        for (var number = 0; number < 2; number++) {
+            for (var i = 0; i < 2; i++) {
+                for (var b = 0; b < data.polish.profession.names[i].length; b++) {
+                    if (data.polish.profession.names[i][b].name == this.state.prof_change &&number==0) {
+                        for (var c = 0; c < 2; c++) {
+                            for (var d = 0; d < data.hooks.skill_hooks[c].length; d++) {
+                                if (data.hooks.skill_hooks[c][d].hook == data.polish.profession.names[i][b].hook) {
+                                    data.hooks.skill_hooks[c][d].stats = this.state.valuesofstats
+                                }
+                            }
+                        }
+                    }
+                    if (data.polish.profession.names[i][b].name == a &&number==1) {
+                        for (var c = 0; c < 2; c++) {
+                            for (var d = 0; d < data.hooks.skill_hooks[c].length; d++) {
+                                if (data.hooks.skill_hooks[c][d].hook == data.polish.profession.names[i][b].hook) {
+                                    this.setState({ valuesofstats: data.hooks.skill_hooks[c][d].stats })
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        this.setState({prof_change:a});
+    }
+    edit_data()
+    {
+        console.log(JSON.stringify(data.hooks))
     }
     render()
     {
@@ -122,10 +152,10 @@ class Create_json extends React.Component
                     <td><input type='number' value={this.state.valuesofstats[5]} id="hook5" onChange={this.handleChange} /></td>
                     <td><input type='number' value={this.state.valuesofstats[6]} id="hook6" onChange={this.handleChange} /></td>
                     <td><input type='number' value={this.state.valuesofstats[7]} id="hook7" onChange={this.handleChange} /></td>
-                    <td><input type='number' value={this.state.valuesofstats[8]} id="hook7" onChange={this.handleChange} /></td>
-                    <td><input type='number' value={this.state.valuesofstats[9]} id="hook7" onChange={this.handleChange} /></td>
-                    <td><input type='number' value={this.state.valuesofstats[10]} id="hook7" onChange={this.handleChange} /></td>
-                    <td><input type='number' value={this.state.valuesofstats[11]} id="hook7" onChange={this.handleChange} /></td>
+                    <td><input type='number' value={this.state.valuesofstats[8]} id="hook8" onChange={this.handleChange} /></td>
+                    <td><input type='number' value={this.state.valuesofstats[9]} id="hook9" onChange={this.handleChange} /></td>
+                    <td><input type='number' value={this.state.valuesofstats[10]} id="hook10" onChange={this.handleChange} /></td>
+                    <td><input type='number' value={this.state.valuesofstats[11]} id="hook11" onChange={this.handleChange} /></td>
                 </tr>
                 <tr>
                     <td colSpan="6">  
@@ -133,8 +163,8 @@ class Create_json extends React.Component
                         {this.create_list()}
                     </select>
                     </td>
-                    <td colSpan="6">  
-                        <input type='button' />
+                    <td colSpan="4">  
+                        <input type='button' onClick={this.edit_data} value="change attributes"/>
                     </td>
                 </tr>
             </table>
